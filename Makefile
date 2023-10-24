@@ -6,11 +6,16 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/10/24 12:33:40 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/10/24 16:49:26 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_isalpha.c
+SRCS = \
+	ft_isalpha.c \
+	ft_isdigit.c \
+	ft_isalnum.c \
+	ft_strlen.c
+
 OBJS = $(SRCS:.c=.o)
 
 libft.a: $(OBJS)
