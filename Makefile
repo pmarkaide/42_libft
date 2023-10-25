@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/10/25 12:32:36 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/10/25 17:46:08 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,11 @@ SRCS = \
 	ft_tolower.c \
 	ft_isascii.c \
 	ft_isupper.c \
-	ft_islower.c
+	ft_islower.c \
+	ft_memset.c \
+	ft_bzero.c \
+	ft_strcat.c  \
+	ft_strcpy.c 
 
 OBJS = $(SRCS:.c=.o)
 
