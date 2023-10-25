@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/10/24 16:49:26 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/10/25 12:32:36 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,13 @@ SRCS = \
 	ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
-	ft_strlen.c
+	ft_isprint.c \
+	ft_strlen.c \
+	ft_toupper.c \
+	ft_tolower.c \
+	ft_isascii.c \
+	ft_isupper.c \
+	ft_islower.c
 
 OBJS = $(SRCS:.c=.o)
 
