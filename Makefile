@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/10/25 17:46:08 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/10/26 13:57:58 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,17 +24,22 @@ SRCS = \
 	ft_memset.c \
 	ft_bzero.c \
 	ft_strcat.c  \
-	ft_strcpy.c 
+	ft_strcpy.c \
+	ft_strjoin.c \
+	ft_strchr.c \
+	ft_strrchr.c
 
 OBJS = $(SRCS:.c=.o)
+
+INCLUDES = .
+
+all: libft.a
 
 libft.a: $(OBJS)
 	ar rcs libft.a $(OBJS)
 
 %.o: %.c
-	cc -Wall -Wextra -Werror -c $< -o $@
-
-all: libft.a
+	cc -Wall -Wextra -Werror -I$(INCLUDES) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)

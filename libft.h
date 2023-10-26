@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:08:37 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/10/25 17:39:05 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/10/26 13:57:49 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 // Own functions
 int	ft_islower(int c);
 int	ft_isupper(int c);
-char	*ft_strcat(char *dest, char *src);
-char	*ft_strcpy(char *dest, char *src);
+char	*ft_strcat(char *dest, const char *src);
+char	*ft_strcpy(char *dest, const char *src);
 
 // Part 1
 int ft_isalpha(int c);
@@ -33,6 +33,8 @@ int	ft_isprint(int c);
 void	*ft_memset(void	*b, int	c, size_t	len);
 void	ft_bzero(void *s, size_t n);
 char *ft_strjoin(char const *s1, char const *s2);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 
 // Part 2
