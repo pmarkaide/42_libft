@@ -6,12 +6,11 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 17:17:38 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/10/26 15:01:20 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:39:45 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

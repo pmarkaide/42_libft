@@ -6,11 +6,10 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:00:17 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/10/27 15:54:48 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:40:46 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stddef.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)

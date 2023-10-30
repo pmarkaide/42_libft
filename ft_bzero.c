@@ -6,12 +6,11 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:54:29 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/10/25 17:16:59 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:56:44 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
