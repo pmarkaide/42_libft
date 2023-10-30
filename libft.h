@@ -6,12 +6,13 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:08:37 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/10/30 15:42:47 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/10/30 17:00:54 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #ifndef LIBFT_H
 #define LIBFT_H
