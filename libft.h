@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:08:37 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/10/30 17:00:54 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:07:25 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	ft_islower(int c);
 int	ft_isupper(int c);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strcpy(char *dest, const char *src);
+int	ft_isspace(char c);
 
 // Part 1
 int ft_isalpha(int c);
@@ -41,6 +42,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
+int	ft_atoi(const char *str);
+char	*ft_strdup(const char *s1);
+void	*ft_calloc(size_t count, size_t size);
 
 
 // Part 2
