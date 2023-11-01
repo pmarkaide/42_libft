@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/10/31 14:29:05 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/11/01 10:06:18 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,11 @@ SRCS = \
 	ft_memcpy.c \
 	ft_memmove.c \
 	ft_memchr.c \
-	ft_memcmp.c
+	ft_memcmp.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
 
