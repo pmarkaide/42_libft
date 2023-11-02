@@ -6,16 +6,27 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:30:26 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/01 15:26:21 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:16:29 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// char	*ft_strtrim(char const *s1, char const *set)
-// {
+#include "libft.h"
 
-// 	// Allocates (with malloc(3)) and returns a copy of
-// 	// ’s1’ with the characters specified in ’set’ removed
-// 	// from the beginning and the end of the string.
-// 	return((char *)s1);
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	setlen;
+	char	*start;
+	char	*end;
+	char	*res;
 
-// }
+	setlen = ft_strlen(set);
+	start = (char *)s1;
+	end = (char *)s1 + ft_strlen(s1);
+	if (ft_strstr((char *)s1, (char *)set) == s1)
+		start = (char *)s1 + setlen;
+	if (ft_strstr(end - setlen, (char *)set) == end - setlen)
+		end = (char *)end - setlen;
+	res = (char *)malloc(sizeof(char) * (end - start + 1));
+	ft_strlcpy(res, start, end - start + 1);
+	return (res);
+}

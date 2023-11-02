@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:08:37 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/02 11:18:04 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/02 14:00:16 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*ft_strcat(char *dest, const char *src);
 char	*ft_strcpy(char *dest, const char *src);
 int	ft_isspace(char c);
 int	ft_numlen(int nb);
+char	*ft_strstr(char *str, char *to_find);
 
 // Part 1
 int ft_isalpha(int c);
