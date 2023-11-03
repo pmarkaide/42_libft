@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/11/02 15:26:50 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/11/03 10:22:47 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,8 @@ SRCS = \
 	ft_numlen.c \
 	ft_striteri.c \
 	ft_strmapi.c \
-	ft_strtrimstr.c
+	ft_strtrim.c \
+	ft_strsplit.c
 
 OBJS = $(SRCS:.c=.o)
 
