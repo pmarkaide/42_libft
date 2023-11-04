@@ -3,14 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
+#    By: pmarkaide <pmarkaid@student.hive.fi>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/11/03 10:22:47 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/11/04 14:46:48 by pmarkaide        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = \
+CC = cc
+
+CFLAGS = -Wall -Wextra -Werror
+
+SRC = \
 	ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -45,32 +49,35 @@ SRCS = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_substr.c \
-	ft_strtrim.c \
 	ft_itoa.c \
 	ft_numlen.c \
 	ft_striteri.c \
 	ft_strmapi.c \
 	ft_strtrim.c \
-	ft_strsplit.c
+	ft_split.c
 
-OBJS = $(SRCS:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 INCLUDES = .
 
 all: libft.a
 
-libft.a: $(OBJS)
-	ar rcs libft.a $(OBJS)
+libft.a: $(OBJ)
+	ar rcs libft.a $(OBJ)
 
 %.o: %.c
-	cc -Wall -Wextra -Werror -I$(INCLUDES) -c $< -o $@
+	$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f libft.a
 
 re: fclean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 .PHONY: all clean fclean re

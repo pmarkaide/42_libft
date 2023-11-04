@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: pmarkaide <pmarkaid@student.hive.fi>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:22:17 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/03 15:20:10 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/04 17:35:33 by pmarkaide        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,25 @@ size_t	ft_strlenc(const char *s, char c)
 		i++;
 	return (i);
 }
-size_t ft_count_words(char const *s, char c)
+
+size_t	ft_count_words(char const *s, char c)
 {
-	size_t i;
 	size_t	words;
 
-	i = 0;
 	words = 0;
-	while(*s)
+	while (*s)
 	{
-		if(*s == c)
-			s++;
-		else
+		if (*s != c)
 		{
 			s += ft_strlenc(s, c);
 			words++;
 		}
+		else
+			s++;
 	}
-	return(words);
+	return (words);
 }
+
 char	*ft_strldup(const char *s1, size_t len)
 {
 	char	*copy;
@@ -47,7 +47,7 @@ char	*ft_strldup(const char *s1, size_t len)
 
 	copy = (char *)malloc((len + 1) * sizeof(char));
 	if (copy == NULL)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (i < len - 1 && s1[i] != '\0')
 	{
@@ -55,50 +55,36 @@ char	*ft_strldup(const char *s1, size_t len)
 		i++;
 	}
 	copy[i] = '\0';
+	if (copy == NULL)
+		return (NULL);
 	return (copy);
 }
 
-
 char	**ft_split(char const *s, char c)
 {
-	size_t words;
-	size_t i = 0;
-	size_t word_len;
-	char **res;
+	size_t	words;
+	size_t	i;
+	size_t	word_len;
+	char	**res;
 
+	i = 0;
+	if (!s)
+		return (NULL);
 	words = ft_count_words(s, c);
-	printf("words: %zu\n", words);
-	res = malloc((words + 1) * sizeof(*res));
+	res = (char **)malloc((words + 1) * sizeof(*res));
 	if (!res)
 		return (NULL);
-	while(*s && i < words)
+	while (*s && i < words)
 	{
-		if(*s == c)
+		if (*s == c)
 			s++;
-		word_len = ft_strlenc(s, c);
-		printf("word_len: %zu\n", word_len); 
-		res[i] = ft_strldup(s, word_len);
-		s += word_len;
-		i++;
+		else
+		{
+			word_len = ft_strlenc(s, c);
+			res[i++] = ft_strldup(s, word_len + 1);
+			s += word_len;
+		}
 	}
 	res[i] = NULL;
-	return(res);
+	return (res);
 }
-
-
-
-int main() {
-   	char str3[] = "   Spaces between words   ";
-    char delimiter = ' ';
-
-    char **result1 = ft_split(str3, delimiter);
-
-    int i = 0;
-    while (result1[i] != NULL) {
-        printf("Result1[%d]: \"%s\"\n", i, result1[i]);
-        i++;
-    }
-
-    return 0;
-}
-
