@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pmarkaide <pmarkaid@student.hive.fi>       +#+  +:+       +#+         #
+#    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/11/04 14:46:48 by pmarkaide        ###   ########.fr        #
+#    Updated: 2023/11/06 15:47:40 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,11 @@ SRC = \
 	ft_striteri.c \
 	ft_strmapi.c \
 	ft_strtrim.c \
-	ft_split.c
+	ft_split.c \
+	ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c
 
 OBJ = $(SRC:.c=.o)
 
