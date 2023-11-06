@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/11/06 15:47:40 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/11/06 16:24:24 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,9 @@ SRC = \
 	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
-	ft_lstlast.c
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c
 
 OBJ = $(SRC:.c=.o)
 
