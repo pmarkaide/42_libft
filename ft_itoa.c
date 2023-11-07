@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:51:48 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/01 16:44:42 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/07 10:34:05 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	digits = ft_numlen(nb);
 	res = (char *)malloc(sizeof(char) * (digits + 1));
-	if (res == NULL)
+	if (!res)
 		return (NULL);
 	if (nb < 0)
 	{

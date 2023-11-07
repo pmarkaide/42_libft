@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:15:29 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/06 15:46:28 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/07 10:35:12 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	size_t	i;
 
 	i = 0;
-	while (lst != NULL)
+	while (lst)
 	{
 		lst = lst->next;
 		i++;

@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:38:21 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/06 15:55:34 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/07 10:34:49 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
-	while (lst->next != NULL)
+	while (lst->next)
 		lst = lst->next;
 	return (lst);
 }

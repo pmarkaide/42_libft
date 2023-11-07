@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:23:55 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/06 17:04:35 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/07 10:34:33 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst == 0 || del == 0)
+	if (!lst|| !del)
 		return ;
 	del(lst->content);
 	free(lst);

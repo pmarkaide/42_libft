@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 09:44:50 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/02 11:26:59 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/07 10:36:28 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
-	if (s == NULL)
+	if (!s)
 		return ;
 	i = 0;
 	while (i < ft_strlen(s))

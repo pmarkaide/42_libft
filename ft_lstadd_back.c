@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:00:27 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/06 16:22:35 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/07 10:31:51 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (lst == NULL || new == NULL)
+	if (!lst || !new)
 		return ;
-	if (*lst == NULL)
+	if (!*lst)
 		*lst = new;
 	else
 		(ft_lstlast(*lst))->next = new;

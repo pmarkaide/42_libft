@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:17:49 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/02 11:44:13 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/07 10:37:02 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	res = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (res == NULL)
+	if (!res)
 		return (NULL);
 	i = 0;
 	while (i < ft_strlen(s))

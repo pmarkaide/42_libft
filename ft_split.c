@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pmarkaide <pmarkaid@student.hive.fi>       +#+  +:+       +#+        */
+/*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:22:17 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/04 17:35:33 by pmarkaide        ###   ########.fr       */
+/*   Updated: 2023/11/07 10:36:02 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_strldup(const char *s1, size_t len)
 	size_t	i;
 
 	copy = (char *)malloc((len + 1) * sizeof(char));
-	if (copy == NULL)
+	if (!copy)
 		return (NULL);
 	i = 0;
 	while (i < len - 1 && s1[i] != '\0')
@@ -55,7 +55,7 @@ char	*ft_strldup(const char *s1, size_t len)
 		i++;
 	}
 	copy[i] = '\0';
-	if (copy == NULL)
+	if (!copy)
 		return (NULL);
 	return (copy);
 }
