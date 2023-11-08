@@ -6,13 +6,11 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/11/07 09:50:50 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/11/08 12:06:45 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = cc
-
-CFLAGS = -Wall -Wextra -Werror
+NAME = libft.a
 
 SRC = \
 	ft_isalpha.c \
@@ -55,6 +53,8 @@ SRC = \
 	ft_strmapi.c \
 	ft_strtrim.c \
 	ft_split.c \
+
+BONUS = \
 	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
@@ -65,28 +65,31 @@ SRC = \
 	ft_lstiter.c \
 	ft_lstmap.c
 
-OBJ = $(SRC:.c=.o)
-
 INCLUDES = .
 
-all: libft.a
+OBJS = $(SRC:.c=.o)
+BONUS_OBJS = $(BONUS:.c=.o)
 
-libft.a: $(OBJ)
-	ar rcs libft.a $(OBJ)
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	rm -f libft.a
+	rm -f $(NAME)
 
 re: fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
-
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
