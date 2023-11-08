@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 13:57:33 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/10/27 09:26:50 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:30:45 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*last;
 
 	last = NULL;
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)(s + ft_strlen(s)));
 	while (*s)
 	{
