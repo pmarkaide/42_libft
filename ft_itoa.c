@@ -6,11 +6,31 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:51:48 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/07 10:34:05 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:50:19 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_numlen(int nb)
+{
+	long	n;
+	int		len;
+
+	len = 0;
+	n = (long)nb;
+	if (n <= 0)
+	{
+		len++;
+		n = -n;
+	}
+	while (n != 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {

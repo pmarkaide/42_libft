@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:08:37 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/08 11:41:56 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/09 09:36:22 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,6 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-
-// Own functions
-int		ft_islower(int c);
-int		ft_isupper(int c);
-char	*ft_strcat(char	*dest, const char *src);
-char	*ft_strcpy(char	*dest, const char *src);
-int		ft_isspace(char c);
-int		ft_numlen(int nb);
-char	*ft_strstr(char *str, char *to_find);
 
 // Part 1
 int		ft_isalpha(int c);

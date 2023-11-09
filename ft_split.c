@@ -6,13 +6,13 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:22:17 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/07 10:36:02 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/09 10:42:32 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlenc(const char *s, char c)
+static size_t	ft_strlenc(const char *s, char c)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ size_t	ft_strlenc(const char *s, char c)
 	return (i);
 }
 
-size_t	ft_count_words(char const *s, char c)
+static size_t	ft_count_words(char const *s, char c)
 {
 	size_t	words;
 
@@ -40,7 +40,7 @@ size_t	ft_count_words(char const *s, char c)
 	return (words);
 }
 
-char	*ft_strldup(const char *s1, size_t len)
+static char	*ft_strldup(const char *s1, size_t len)
 {
 	char	*copy;
 	size_t	i;
