@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 08:27:43 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/07 14:38:49 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/09 09:01:05 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	int	i;
-	int	nb;
+	int long nb;
 	int	neg;
 
 	i = 0;
@@ -28,6 +28,12 @@ int	ft_atoi(const char *str)
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i] && ft_isdigit(str[i]))
+		{
 		nb = 10 * nb + str[i++] - '0';
+		if(nb < 0 && neg < 0)
+			return(0);
+		else if (nb < 0 && neg > 0)
+			return (-1);
+		}
 	return (nb * neg);
 }
