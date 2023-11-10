@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 11:36:58 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/10 09:14:00 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:47:01 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
 	char	*ptr;
-	char	*result;
 
 	if (!s)
 		return (NULL);
@@ -28,13 +27,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
-	result = ptr;
-	s += start;
-	while (len && *s)
-	{
-		*ptr++ = *s++;
-		len--;
-	}
-	*ptr = '\0';
-	return (result);
+	ft_strlcpy(ptr, s + start, len + 1);
+	return (ptr);
 }
