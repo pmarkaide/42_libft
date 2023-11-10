@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:22:17 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/09 10:42:32 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/10 10:14:40 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,40 +40,26 @@ static size_t	ft_count_words(char const *s, char c)
 	return (words);
 }
 
-static char	*ft_strldup(const char *s1, size_t len)
+static char	**ft_free_array_if_nulls(char **arr)
 {
-	char	*copy;
-	size_t	i;
+	int	i;
 
-	copy = (char *)malloc((len + 1) * sizeof(char));
-	if (!copy)
-		return (NULL);
 	i = 0;
-	while (i < len - 1 && s1[i] != '\0')
+	while (arr[i] != NULL)
 	{
-		copy[i] = s1[i];
+		free(arr[i]);
 		i++;
 	}
-	copy[i] = '\0';
-	if (!copy)
-		return (NULL);
-	return (copy);
+	free(arr);
+	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_write_splits(char **res, size_t words, char const *s, char c)
 {
-	size_t	words;
-	size_t	i;
 	size_t	word_len;
-	char	**res;
+	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
-	words = ft_count_words(s, c);
-	res = (char **)malloc((words + 1) * sizeof(*res));
-	if (!res)
-		return (NULL);
 	while (*s && i < words)
 	{
 		if (*s == c)
@@ -81,10 +67,27 @@ char	**ft_split(char const *s, char c)
 		else
 		{
 			word_len = ft_strlenc(s, c);
-			res[i++] = ft_strldup(s, word_len + 1);
+			res[i] = ft_substr(s, 0, word_len);
+			if (res[i] == NULL)
+				return (ft_free_array_if_nulls(res));
 			s += word_len;
+			i++;
 		}
 	}
 	res[i] = NULL;
 	return (res);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	words;
+	char	**res;
+
+	if (!s)
+		return (NULL);
+	words = ft_count_words(s, c);
+	res = (char **)malloc((words + 1) * sizeof(*res));
+	if (!res)
+		return (NULL);
+	return (ft_write_splits(res, words, s, c));
 }
