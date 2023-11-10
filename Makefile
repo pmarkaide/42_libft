@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/11/09 09:35:57 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/11/10 16:41:03 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,14 +72,18 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-
 %.o: %.c
 	$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
 
+bonus: .bonus
+
+.bonus: $(BONUS_OBJS)
+	ar rcs $(NAME) $(BONUS_OBJS)
+	touch .bonus
+
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f .bonus
 
 fclean: clean
 	rm -f $(NAME)
