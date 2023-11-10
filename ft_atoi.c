@@ -20,9 +20,9 @@ static int	ft_isspace(char c)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int long nb;
-	int	neg;
+	int			i;
+	int long	nb;
+	int			neg;
 
 	i = 0;
 	nb = 0;
@@ -34,12 +34,12 @@ int	ft_atoi(const char *str)
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i] && ft_isdigit(str[i]))
-		{
+	{
 		nb = 10 * nb + str[i++] - '0';
-		if(nb < 0 && neg < 0)
-			return(0);
+		if (nb < 0 && neg < 0)
+			return (0);
 		else if (nb < 0 && neg > 0)
 			return (-1);
-		}
+	}
 	return (nb * neg);
 }
