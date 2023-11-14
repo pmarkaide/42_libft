@@ -6,11 +6,9 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 12:16:36 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/09 10:49:58 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/14 18:46:41 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	ft_isupper(int c)
 {

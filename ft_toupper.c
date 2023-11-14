@@ -6,11 +6,9 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 10:40:26 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/09 09:27:25 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/14 18:46:46 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	ft_islower(int c)
 {
