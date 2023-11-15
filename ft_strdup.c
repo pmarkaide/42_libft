@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 09:53:00 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/09 09:30:18 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/15 09:23:25 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ char	*ft_strdup(const char *s1)
 
 	copy = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
 	if (!copy)
-		return (0);
+		return (NULL);
 	return (ft_strcpy(copy, s1));
 }

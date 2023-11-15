@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:54:28 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/10/31 12:41:12 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/15 09:22:58 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (!dst && !src)
-		return (0);
+		return (NULL);
 	if (src < dst && src + len > dst)
 		while (len--)
 			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];

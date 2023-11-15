@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 10:46:21 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/08 11:35:23 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2023/11/15 09:22:53 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	i = 0;
 	if (!dst && !src)
-		return (0);
+		return (NULL);
 	while (n--)
 	{
 		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
