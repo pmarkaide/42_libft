@@ -23,16 +23,16 @@ The unique approach taken is not just to learn the use of functions like `strnst
 - **Memory Management:** Functions for memory allocation and manipulation.
 - **Linked Lists:** Basic operations for linked list handling.
 - **Character Operations:** Functions for character manipulation and checking.
-- **File Operations:** Basic file-related functionalities.
+- **File writing:** Writting desired data into files.
 
 ## Getting Started
 
-To use Libft in your project, you must clone the repo and run the makefile with bonus to compile also the linked-list functions
+To use Libft in your project, you must clone the repo and run the makefile:
 
 ```bash
-git clone https://github.com/pmarkaid/42_libft.git
-cd 42_libft
-make bonus
+git clone https://github.com/pmarkaid/42_libft.git libft
+cd libft
+make
 ```
 
 ## Usage Examples
@@ -47,24 +47,29 @@ int main() {
     // Example 1: Convert a string to an integer
     const char *str1 = "12345";
     int result1 = ft_atoi(str1);
-    printf("Result 1: %d\n", result1);
+    printf("Result 1 (ft_atoi): %d\n", result1);
 
-    // Example 2: Convert a string with leading spaces
-    const char *str2 = "   -6789";
-    int result2 = ft_atoi(str2);
-    printf("Result 2: %d\n", result2);
+    // Example 2: Get a substring
+    const char *str2 = "Hello, World!";
+    char *result2 = ft_substr(str2, 7, 5);
+    printf("Result 2 (ft_substr): %s\n", result2);
+    free(result2);
 
-    // Example 3: Convert a string with non-numeric characters
-    const char *str3 = "42 is the answer";
-    int result3 = ft_atoi(str3);
-    printf("Result 3: %d\n", result3);
+    // Example 3: Add an element to the end of a linked list
+    t_list *list = NULL;
+    int data = 42;
+    ft_lstadd_back(&list, ft_lstnew(&data));
+    printf("Result 3 (ft_lstadd_back): %d\n", *(int *)(list->content));
+
+    // Cleanup: Free the linked list
+    ft_lstclear(&list, free);
 
     return 0;
 }
 ```
 
 ## Contribution Guidelines
-Contributions are welcome! If you see any bug or want to add a useful function to libft, you are welcome to make a pull request. 
+Contributions are welcome! If you see any bug, you are welcome to make open an issue.
 
 ## License
 This project is licensed under the [MIT License](https://raw.githubusercontent.com/pmarkaide/42_libft/master/LICENSE).

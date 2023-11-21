@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/11/10 16:41:03 by pmarkaid         ###   ########.fr        #
+#    Updated: 2023/11/21 10:42:02 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,8 +47,6 @@ SRC = \
 	ft_strmapi.c \
 	ft_strtrim.c \
 	ft_split.c \
-
-BONUS = \
 	ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
@@ -62,7 +60,6 @@ BONUS = \
 INCLUDES = .
 
 OBJS = $(SRC:.c=.o)
-BONUS_OBJS = $(BONUS:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -75,19 +72,12 @@ $(NAME): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -I$(INCLUDES) -c $< -o $@
 
-bonus: .bonus
-
-.bonus: $(BONUS_OBJS)
-	ar rcs $(NAME) $(BONUS_OBJS)
-	touch .bonus
-
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
-	rm -f .bonus
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
