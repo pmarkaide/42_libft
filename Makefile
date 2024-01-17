@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2023/11/21 10:42:02 by pmarkaid         ###   ########.fr        #
+#    Updated: 2024/01/17 14:47:39 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,11 @@ SRC = \
 	ft_lstdelone.c \
 	ft_lstclear.c \
 	ft_lstiter.c \
-	ft_lstmap.c
+	ft_lstmap.c \
+	ft_printf.c \
+	ft_putnbr_fd_hex.c \
+	ft_putnbr_fd_uns.c \
+	ft_putptr_fd.c
 
 INCLUDES = .
 
