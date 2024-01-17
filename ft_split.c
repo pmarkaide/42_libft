@@ -6,21 +6,11 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:22:17 by pmarkaid          #+#    #+#             */
-/*   Updated: 2023/11/10 10:14:40 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2024/01/17 15:59:20 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_strlenc(const char *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != c && s[i] != '\0')
-		i++;
-	return (i);
-}
 
 static size_t	ft_count_words(char const *s, char c)
 {

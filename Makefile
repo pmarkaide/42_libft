@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2024/01/17 14:47:39 by pmarkaid         ###   ########.fr        #
+#    Updated: 2024/01/17 16:00:51 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,10 @@ SRC = \
 	ft_printf.c \
 	ft_putnbr_fd_hex.c \
 	ft_putnbr_fd_uns.c \
-	ft_putptr_fd.c
+	ft_putptr_fd.c \
+	ft_strlenc.c \
+	ft_free.c \
+	get_next_line.c
 
 INCLUDES = .
 
