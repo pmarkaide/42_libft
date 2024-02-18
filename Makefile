@@ -6,7 +6,7 @@
 #    By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 12:10:27 by pmarkaid          #+#    #+#              #
-#    Updated: 2024/01/17 16:00:51 by pmarkaid         ###   ########.fr        #
+#    Updated: 2024/02/18 14:45:24 by pmarkaid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC = \
 	ft_toupper.c \
 	ft_tolower.c \
 	ft_isascii.c \
+	ft_isspace.c \
 	ft_memset.c \
 	ft_bzero.c \
 	ft_strjoin.c \
