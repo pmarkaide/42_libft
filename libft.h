@@ -6,7 +6,7 @@
 /*   By: pmarkaid <pmarkaid@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:08:37 by pmarkaid          #+#    #+#             */
-/*   Updated: 2024/02/18 14:45:51 by pmarkaid         ###   ########.fr       */
+/*   Updated: 2024/02/18 15:52:05 by pmarkaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ char	**ft_split(char const *s, char c);
 char	*get_next_line(int fd);
 char	*ft_free(char **str);
 size_t	ft_strlenc(const char *s, char c);
+void	ft_print_array(char **array);
 
 typedef struct s_list
 {
